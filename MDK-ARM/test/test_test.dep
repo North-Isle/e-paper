@@ -1,6 +1,6 @@
 Dependencies for Project 'test', Target 'test': (DO NOT MODIFY !)
 F (startup_stm32f103xb.s)(0x67FA6398)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_test-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include--pd "__UVISION_VERSION SETA 524" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1"--list startup_stm32f103xb.lst --xref -o test\startup_stm32f103xb.o --depend test\startup_stm32f103xb.d)
-F (../Src/main.c)(0x680D90E2)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../User/Config -I ../User/e-Paper -I ../User/Examples -I ../User/Fonts -I ../User/GUI -I ../Drivers/Hantao-F103 -I ..\MDK-ARM --no-multibyte-chars-I.\RTE\_test-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o test\main.o --omf_browse test\main.crf --depend test\main.d)
+F (../Src/main.c)(0x68175A41)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../User/Config -I ../User/e-Paper -I ../User/Examples -I ../User/Fonts -I ../User/GUI -I ../Drivers/Hantao-F103 -I ..\MDK-ARM --no-multibyte-chars-I.\RTE\_test-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o test\main.o --omf_browse test\main.crf --depend test\main.d)
 I (../Inc/main.h)(0x67F78C22)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h)(0x67D046D0)
 I (../Inc/stm32f1xx_hal_conf.h)(0x67FA5CE6)
@@ -38,14 +38,14 @@ I (../User/e-Paper/EPD_2in9.h)(0x67FA60CD)
 I (../User/Config/DEV_Config.h)(0x64420625)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (../Drivers/Hantao-F103/driver_dht11.h)(0x65045541)
-I (../User/Fonts/fonts.h)(0x680D90E0)
+I (../User/Fonts/fonts.h)(0x68175A60)
 I (../User/Examples/EPD_use.h)(0x680D8EBB)
 I (../User/Examples/EPD_Test.h)(0x6342AC54)
 I (../User/GUI/GUI_Paint.h)(0x634D3F81)
 I (../User/Examples/imagedata.h)(0x67F4E9E7)
 I (../User/Config/Debug.h)(0x5BEFB7E6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
-I (../User/Examples/Picture.h)(0x680D8EC3)
+I (../User/Examples/Picture.h)(0x68175ADB)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 F (../Src/gpio.c)(0x67F78C20)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../User/Config -I ../User/e-Paper -I ../User/Examples -I ../User/Fonts -I ../User/GUI -I ../Drivers/Hantao-F103 -I ..\MDK-ARM --no-multibyte-chars-I.\RTE\_test-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o test\gpio.o --omf_browse test\gpio.crf --depend test\gpio.d)
 I (../Inc/gpio.h)(0x67D0E1D5)
@@ -729,36 +729,34 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h)(0x67D046D0)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x67D046D0)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x67D046D0)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
-I (..\User\GUI\../Fonts/fonts.h)(0x680D90E0)
+I (..\User\GUI\../Fonts/fonts.h)(0x68175A60)
 I (../User/Config/Debug.h)(0x5BEFB7E6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
 I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
 I (D:\Keil_v5\ARM\ARMCC\include\math.h)(0x588B8344)
 F (..\User\GUI\GUI_Paint.h)(0x634D3F81)()
 F (..\User\Fonts\font8.c)(0x680D9130)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../User/Config -I ../User/e-Paper -I ../User/Examples -I ../User/Fonts -I ../User/GUI -I ../Drivers/Hantao-F103 -I ..\MDK-ARM --no-multibyte-chars-I.\RTE\_test-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o test\font8.o --omf_browse test\font8.crf --depend test\font8.d)
-I (..\User\Fonts\fonts.h)(0x680D90E0)
+I (..\User\Fonts\fonts.h)(0x68175A60)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 F (..\User\Fonts\font12.c)(0x5B3C9236)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../User/Config -I ../User/e-Paper -I ../User/Examples -I ../User/Fonts -I ../User/GUI -I ../Drivers/Hantao-F103 -I ..\MDK-ARM --no-multibyte-chars-I.\RTE\_test-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o test\font12.o --omf_browse test\font12.crf --depend test\font12.d)
-I (..\User\Fonts\fonts.h)(0x680D90E0)
+I (..\User\Fonts\fonts.h)(0x68175A60)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 F (..\User\Fonts\font12CN.c)(0x67F7C850)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../User/Config -I ../User/e-Paper -I ../User/Examples -I ../User/Fonts -I ../User/GUI -I ../Drivers/Hantao-F103 -I ..\MDK-ARM --no-multibyte-chars-I.\RTE\_test-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o test\font12cn.o --omf_browse test\font12cn.crf --depend test\font12cn.d)
-I (..\User\Fonts\fonts.h)(0x680D90E0)
+I (..\User\Fonts\fonts.h)(0x68175A60)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 F (..\User\Fonts\font16.c)(0x5B3C9236)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../User/Config -I ../User/e-Paper -I ../User/Examples -I ../User/Fonts -I ../User/GUI -I ../Drivers/Hantao-F103 -I ..\MDK-ARM --no-multibyte-chars-I.\RTE\_test-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o test\font16.o --omf_browse test\font16.crf --depend test\font16.d)
-I (..\User\Fonts\fonts.h)(0x680D90E0)
+I (..\User\Fonts\fonts.h)(0x68175A60)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 F (..\User\Fonts\font20.c)(0x5B3C9236)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../User/Config -I ../User/e-Paper -I ../User/Examples -I ../User/Fonts -I ../User/GUI -I ../Drivers/Hantao-F103 -I ..\MDK-ARM --no-multibyte-chars-I.\RTE\_test-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o test\font20.o --omf_browse test\font20.crf --depend test\font20.d)
-I (..\User\Fonts\fonts.h)(0x680D90E0)
+I (..\User\Fonts\fonts.h)(0x68175A60)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-F (..\User\Fonts\font24.c)(0x680D9169)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../User/Config -I ../User/e-Paper -I ../User/Examples -I ../User/Fonts -I ../User/GUI -I ../Drivers/Hantao-F103 -I ..\MDK-ARM --no-multibyte-chars-I.\RTE\_test-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o test\font24.o --omf_browse test\font24.crf --depend test\font24.d)
-I (..\User\Fonts\fonts.h)(0x680D90E0)
-I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+F (..\User\Fonts\font24.c)(0x68175AB7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../User/Config -I ../User/e-Paper -I ../User/Examples -I ../User/Fonts -I ../User/GUI -I ../Drivers/Hantao-F103 -I ..\MDK-ARM --no-multibyte-chars-I.\RTE\_test-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o test\font24.o --omf_browse test\font24.crf --depend test\font24.d)
 F (..\User\Fonts\font24CN.c)(0x5A9E4AFB)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../User/Config -I ../User/e-Paper -I ../User/Examples -I ../User/Fonts -I ../User/GUI -I ../Drivers/Hantao-F103 -I ..\MDK-ARM --no-multibyte-chars-I.\RTE\_test-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o test\font24cn.o --omf_browse test\font24cn.crf --depend test\font24cn.d)
-I (..\User\Fonts\fonts.h)(0x680D90E0)
+I (..\User\Fonts\fonts.h)(0x68175A60)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
-F (..\User\Fonts\fonts.h)(0x680D90E0)()
+F (..\User\Fonts\fonts.h)(0x68175A60)()
 F (..\User\Fonts\font48.c)(0x67FA3A55)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../User/Config -I ../User/e-Paper -I ../User/Examples -I ../User/Fonts -I ../User/GUI -I ../Drivers/Hantao-F103 -I ..\MDK-ARM --no-multibyte-chars-I.\RTE\_test-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o test\font48.o --omf_browse test\font48.crf --depend test\font48.d)
-I (..\User\Fonts\fonts.h)(0x680D90E0)
+I (..\User\Fonts\fonts.h)(0x68175A60)
 I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
 F (..\User\Config\Debug.h)(0x5BEFB7E6)()
 F (..\User\Config\DEV_Config.c)(0x67D10FDC)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../User/Config -I ../User/e-Paper -I ../User/Examples -I ../User/Fonts -I ../User/GUI -I ../Drivers/Hantao-F103 -I ..\MDK-ARM --no-multibyte-chars-I.\RTE\_test-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o test\dev_config.o --omf_browse test\dev_config.crf --depend test\dev_config.d)
@@ -836,12 +834,12 @@ I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h)(0x67D046D0)
 I (../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h)(0x67D046D0)
 I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
 I (../User/GUI/GUI_Paint.h)(0x634D3F81)
-I (../User/GUI/../Fonts/fonts.h)(0x680D90E0)
+I (../User/GUI/../Fonts/fonts.h)(0x68175A60)
 I (..\User\Examples\imagedata.h)(0x67F4E9E7)
 I (../User/Config/Debug.h)(0x5BEFB7E6)
 I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
 I (../User/e-Paper/EPD_2in9.h)(0x67FA60CD)
-F (..\User\Examples\Picture.h)(0x680D8EC3)()
+F (..\User\Examples\Picture.h)(0x68175ADB)()
 F (..\User\e-Paper\EPD_2in9.c)(0x67F72DF2)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc -I ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I ../Drivers/CMSIS/Include -I ../User/Config -I ../User/e-Paper -I ../User/Examples -I ../User/Fonts -I ../User/GUI -I ../Drivers/Hantao-F103 -I ..\MDK-ARM --no-multibyte-chars-I.\RTE\_test-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -DSTM32F10X_MD -DUSE_HAL_DRIVER -DSTM32F103xB-o test\epd_2in9_1.o --omf_browse test\epd_2in9_1.crf --depend test\epd_2in9_1.d)
 I (..\User\e-Paper\EPD_2in9.h)(0x67FA60CD)
 I (../User/Config/DEV_Config.h)(0x64420625)

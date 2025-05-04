@@ -407,8 +407,8 @@ HAL_Delay(2000);    EPD_2IN9_Display(BlackImage);
 		Paint_DrawBitMapXY(gImage_wifi, 276, 0, 20, 20); // ����λ��
 		Paint_DrawBitMapXY(gImage_hum, 0, 44, 20, 20); // ����λ��
 		Paint_DrawBitMapXY(gImage_tem, 0,79, 20, 20); // ����λ��
-		Paint_DrawString_EN(54, 44, "%", &Font24, WHITE, BLACK);
-		Paint_DrawString_EN(54, 79, "C", &Font24, WHITE, BLACK);
+		Paint_DrawString_EN(54, 44, "%", &Font20, WHITE, BLACK);
+		Paint_DrawString_EN(54, 79, "C", &Font20, WHITE, BLACK);
 
 
 		Paint_DrawString_EN(0, 2, real_time, &Font16, WHITE, BLACK);
