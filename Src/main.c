@@ -262,9 +262,9 @@ int MY_EPD_test(void)
 
 int E_test(void)
 {
-Paint_DrawBitMapXY(gImage_snow, 246, 21, 50, 50); // ����λ��
-HAL_Delay(2000);    EPD_2IN9_Display(BlackImage);
-return 0;
+		Paint_DrawBitMapXY(gImage_snow, 246, 21, 50, 50); // ����λ��
+		HAL_Delay(2000);    EPD_2IN9_Display(BlackImage);
+		return 0;
 }
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
@@ -275,6 +275,24 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 }
 
 
+void Get_time(void)
+{
+		printf("\r\n+++");	HAL_Delay(5000);	
+		printf("AT+CIPCLOSE\r\n");		HAL_Delay(1000);				
+		HAL_UART_Receive_IT(&huart1, &rxBuffer[0], 1);
+		HAL_UART_AbortReceive_IT(&huart1);		
+		printf("+++");		HAL_Delay(1000);
+		printf("\r\n");		HAL_Delay(1000);
+		printf("AT+CIPCLOSE\r\n");		HAL_Delay(1000);		
+		printf("AT+RST\r\n");		HAL_Delay(1000);	
+		printf("AT+CWJAP=\"HANTAO\",\"1234567a\"\r\n");  HAL_Delay(3000);
+		printf("AT+CWMODE=1\r\n");HAL_Delay(2000);		
+		printf("AT+CIPSTART=\"TCP\",\"f.m.suning.com\",80\r\n");HAL_Delay(6000);
+		printf("AT+CWMODE=1\r\n");HAL_Delay(2000);			
+		printf("AT+CIPMODE=1\r\n");HAL_Delay(1000);
+		printf("AT+CIPSEND\r\n");	HAL_Delay(1000);		
+
+}
 /* USER CODE END 0 */
 
 /**
@@ -316,10 +334,7 @@ int main(void)
 	MY_EPD_test();
 	DHT11_Init();
 	HAL_TIM_Base_Start_IT(&htim4);
-
-
-
-HAL_Delay(2000);    EPD_2IN9_Display(BlackImage);
+	HAL_Delay(2000);    EPD_2IN9_Display(BlackImage);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -341,14 +356,12 @@ HAL_Delay(2000);    EPD_2IN9_Display(BlackImage);
 		printf("AT+CIPSTART=\"TCP\",\"api.seniverse.com\",80\r\n");HAL_Delay(2000);
 		printf("AT+CIPMODE=1\r\n");HAL_Delay(1000);
 		printf("AT+CIPSEND\r\n");	HAL_Delay(1000);
-
-
-			HAL_UART_AbortReceive_IT(&huart1);
-			HAL_Delay(1000);
-			printf("GET http://api.seniverse.com/v3/weather/now.json?key=SHxTJ0yyZMhCuawJ9&location=haerbin&language=zh-Hans&unit=c\r\n\r\n");	
-			uint8_t end = 0x1A;
-			HAL_UART_Transmit(&huart1, &end, 1, 100);
-			 HAL_UART_Receive_IT(&huart1, &rxBuffer[0], 1);
+		HAL_UART_AbortReceive_IT(&huart1);
+		HAL_Delay(1000);
+		printf("GET http://api.seniverse.com/v3/weather/now.json?key=SHxTJ0yyZMhCuawJ9&location=haerbin&language=zh-Hans&unit=c\r\n\r\n");	
+		uint8_t end = 0x1A;
+		HAL_UART_Transmit(&huart1, &end, 1, 100);
+		HAL_UART_Receive_IT(&huart1, &rxBuffer[0], 1);
         if (rxIndex > 0)  
         {
             processReceivedData(rxBuffer, rxIndex);
@@ -362,21 +375,7 @@ HAL_Delay(2000);    EPD_2IN9_Display(BlackImage);
         E_test();
     }	
 
-		printf("\r\n+++");	HAL_Delay(5000);	
-		printf("AT+CIPCLOSE\r\n");		HAL_Delay(1000);			
-			
-		HAL_UART_Receive_IT(&huart1, &rxBuffer[0], 1);
-		HAL_UART_AbortReceive_IT(&huart1);		
-		printf("+++");		HAL_Delay(1000);
-		printf("\r\n");		HAL_Delay(1000);
-		printf("AT+CIPCLOSE\r\n");		HAL_Delay(1000);		
-		printf("AT+RST\r\n");		HAL_Delay(1000);	
-		printf("AT+CWJAP=\"HANTAO\",\"1234567a\"\r\n");  HAL_Delay(3000);
-		printf("AT+CWMODE=1\r\n");HAL_Delay(2000);		
-		printf("AT+CIPSTART=\"TCP\",\"f.m.suning.com\",80\r\n");HAL_Delay(6000);
-		printf("AT+CWMODE=1\r\n");HAL_Delay(2000);			
-		printf("AT+CIPMODE=1\r\n");HAL_Delay(1000);
-		printf("AT+CIPSEND\r\n");	HAL_Delay(1000);		
+		Get_time();	
 		clear_rxBuffer();	rxIndex = 0;
 
 			HAL_UART_AbortReceive_IT(&huart1);
@@ -401,8 +400,6 @@ HAL_Delay(2000);    EPD_2IN9_Display(BlackImage);
 //	EPD_2IN9_Display(BlackImage);
 //	Paint_DrawString_EN(60, 0, update_result, &Font24, BLACK,WHITE);		
 //	HAL_Delay(2000);    EPD_2IN9_Display(BlackImage);
-		//clear(0,0,296,128,0X00);
-		//clear(0,0,50,70,0XFF);
 		DHT11_Read(&hum, &temp);
 		Paint_DrawBitMapXY(gImage_wifi, 276, 0, 20, 20); // ����λ��
 		Paint_DrawBitMapXY(gImage_hum, 0, 44, 20, 20); // ����λ��
@@ -437,7 +434,6 @@ HAL_Delay(2000);    EPD_2IN9_Display(BlackImage);
     EPD_2IN9_Display(BlackImage);
 		HAL_Delay(8000);    
 
-		
 	}
 
 
