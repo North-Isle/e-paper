@@ -274,6 +274,24 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	
 }
 
+void Get_Weather(void)
+{
+		HAL_UART_Receive_IT(&huart1, &rxBuffer[0], 1);
+		HAL_UART_AbortReceive_IT(&huart1);
+		printf("AT\r\n");		HAL_Delay(1000);
+		printf("AT+RST\r\n");		HAL_Delay(1000);
+		printf("AT+CWJAP=\"HANTAO\",\"1234567a\"\r\n");  HAL_Delay(3000);
+		printf("AT+CWMODE=1\r\n");HAL_Delay(2000);
+		printf("AT+CIPSTART=\"TCP\",\"api.seniverse.com\",80\r\n");HAL_Delay(2000);
+		printf("AT+CIPMODE=1\r\n");HAL_Delay(1000);
+		printf("AT+CIPSEND\r\n");	HAL_Delay(1000);
+		HAL_UART_AbortReceive_IT(&huart1);
+		HAL_Delay(1000);
+		printf("GET http://api.seniverse.com/v3/weather/now.json?key=SHxTJ0yyZMhCuawJ9&location=haerbin&language=zh-Hans&unit=c\r\n\r\n");	
+		uint8_t end = 0x1A;
+		HAL_UART_Transmit(&huart1, &end, 1, 100);
+
+}
 
 void Get_time(void)
 {
@@ -347,21 +365,9 @@ int main(void)
 //  	HAL_Delay(1000);
 
 //	}
-		HAL_UART_Receive_IT(&huart1, &rxBuffer[0], 1);
-		HAL_UART_AbortReceive_IT(&huart1);
-		printf("AT\r\n");		HAL_Delay(1000);
-		printf("AT+RST\r\n");		HAL_Delay(1000);
-		printf("AT+CWJAP=\"HANTAO\",\"1234567a\"\r\n");  HAL_Delay(3000);
-		printf("AT+CWMODE=1\r\n");HAL_Delay(2000);
-		printf("AT+CIPSTART=\"TCP\",\"api.seniverse.com\",80\r\n");HAL_Delay(2000);
-		printf("AT+CIPMODE=1\r\n");HAL_Delay(1000);
-		printf("AT+CIPSEND\r\n");	HAL_Delay(1000);
-		HAL_UART_AbortReceive_IT(&huart1);
-		HAL_Delay(1000);
-		printf("GET http://api.seniverse.com/v3/weather/now.json?key=SHxTJ0yyZMhCuawJ9&location=haerbin&language=zh-Hans&unit=c\r\n\r\n");	
-		uint8_t end = 0x1A;
-		HAL_UART_Transmit(&huart1, &end, 1, 100);
-		HAL_UART_Receive_IT(&huart1, &rxBuffer[0], 1);
+
+				Get_Weather();
+				HAL_UART_Receive_IT(&huart1, &rxBuffer[0], 1);
         if (rxIndex > 0)  
         {
             processReceivedData(rxBuffer, rxIndex);
