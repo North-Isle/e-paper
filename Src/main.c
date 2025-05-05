@@ -71,6 +71,7 @@ char update_result[100];
 char tem_result[100];
 char real_time[100];
 int count=0;
+PAINT_TIME part_time;
 int year,month,day,hum,temp;
 UWORD Imagesize = ((EPD_2IN9_WIDTH % 8 == 0)? 
                     (EPD_2IN9_WIDTH / 8 ) : 
@@ -274,6 +275,14 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	
 }
 
+void Set_Time(char *real_time)
+{
+		part_time.Hour=(real_time[17]-'0')*10+real_time[18]-'0'+8;
+		part_time.Min=(real_time[20]-'0')*10+real_time[21]-'0';
+		part_time.Sec=(real_time[23]-'0')*10+real_time[24]-'0';		
+
+}
+
 void Get_Weather(void)
 {
 		HAL_UART_Receive_IT(&huart1, &rxBuffer[0], 1);
@@ -366,13 +375,13 @@ int main(void)
 
 //	}
 
-				Get_Weather();
-				HAL_UART_Receive_IT(&huart1, &rxBuffer[0], 1);
-        if (rxIndex > 0)  
-        {
-            processReceivedData(rxBuffer, rxIndex);
-        }
-			HAL_Delay(1000);
+		Get_Weather();
+		HAL_UART_Receive_IT(&huart1, &rxBuffer[0], 1);
+		if (rxIndex > 0)  
+		{
+				processReceivedData(rxBuffer, rxIndex);
+		}
+		HAL_Delay(1000);
 		extractText((const char *)rxBuffer);  
 		extract_update((const char *)rxBuffer);  
 		extract_tempare((const char *)rxBuffer); 	
@@ -424,10 +433,10 @@ int main(void)
 		Paint_DrawString_EN(255, 112, tem_result, &Font16, WHITE, BLACK);
 
     DEV_Delay_ms(2000);    EPD_2IN9_Display(BlackImage);
-		PAINT_TIME part_time;
-		part_time.Hour=(real_time[17]-'0')*10+real_time[18]-'0'+8;
-		part_time.Min=(real_time[20]-'0')*10+real_time[21]-'0';
-		part_time.Sec=(real_time[23]-'0')*10+real_time[24]-'0';		
+		Set_Time(real_time);
+//		part_time.Hour=(real_time[17]-'0')*10+real_time[18]-'0'+8;
+//		part_time.Min=(real_time[20]-'0')*10+real_time[21]-'0';
+//		part_time.Sec=(real_time[23]-'0')*10+real_time[24]-'0';		
 		Paint_DrawTime(100,51,&part_time,&Font48, WHITE, BLACK);
 		while(1)
 	{
